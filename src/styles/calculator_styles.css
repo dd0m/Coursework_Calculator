@@ -1,0 +1,185 @@
+
+/*
+  Calculator Styles Sheet
+*/
+
+
+
+
+
+html {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ body {
+  height: 100%;
+  margin: 0 auto;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: linear-gradient(130deg, #4be096 0%, #67c2bf 85%, #9bc4bc 100%);
+  font-family: 'Lato', sans-serif;
+}
+
+.grid-container {
+  width: 1020px;
+  height: 800px;
+  display: grid;
+  gap: 15px 15px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 240px);
+  background-color: #ecebee;
+  opacity: 90%;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 5px 4px 14px 2px rgba(61, 52, 194, 0.75);
+}
+
+.grid-item {
+  background-color: #f7f7f7;
+  border: 1px solid rgba(201, 201, 201, 0.8);
+  box-shadow: 1px 1px rgb(196, 192, 206);
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  width: 80%;
+}
+
+.reading {
+  grid-column: 1;
+  grid-row: 2/4;
+}
+
+.writing {
+  grid-column: 2;
+  grid-row: 1/3;
+}
+
+.discussions {
+  grid-column: 3;
+  grid-row: 1/3;
+}
+
+.class-label {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  font-weight: 400;
+}
+
+.page-selection {
+  font-weight: 400;
+}
+
+.total {
+  float: left;
+  font-weight: 500;
+}
+
+.input {
+  width: auto;
+  display: inline-block;
+  height: 16px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.course-search {
+  width: auto;
+  display: inline-block;
+  height: 16px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.results li {
+  color: rgb(70, 38, 185);
+  font-weight: 600;
+  font-size: 16px;
+  list-style-type: none;
+  padding-right: 25px;
+}
+
+
+.h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 1.1;
+}
+
+.page-number {
+  min-height: 34px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-color: rgb(168, 168, 168);
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.button {
+  background-color: rgb(59, 21, 230);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 700;
+  border: 1px solid;
+  border-color: rgba(61, 52, 194, 0.75);
+  box-shadow:  2px 2px 2px rgba(61, 52, 194, 0.75);
+}
+
+.button:hover {
+  background-color:#2f308d;
+  color: rgb(170, 170, 170);
+}
+
+
+/*
+@media (max-width: 1020px) {
+  .grid-container {
+    height: 600px;
+    width: 800px;
+  }
+}
+*/

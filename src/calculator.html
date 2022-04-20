@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Tab bar title and icon image-->
+        <link rel="tab icon" href="/src/images/tulane_favicon.ico">
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SoPA Coursework Calculator</title>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="styles/calculator_styles.css">
+    </head>
+    <body>
+
+        <div class="grid-container">
+            <div class="grid-item courses">COURSE INFO<br><br>
+                <label class="class-label">Search Courses:</label>
+                <div class='courses'>
+                    <input type="text" id="search" class="course-search" placeholder="Search.."><br><br>
+                    <div class="results">
+
+                    </div>
+                </div>
+     
+            </div>
+            <div class="grid-item writing">WRITING ASSIGNMENTS<br><br>
+                <label class="class-label">Pages Per Semester:</label>
+                <input type="text" id="writing" class="input" onkeyup="getWritingRate()"><br><br>
+                <label class="page-selection" id="select">Page Density:</label><br><br>
+                <select class="page-number" value="0">
+                    <option value="0">Select Pages:</option><br><br>
+                    <option value="1">250</option>
+                    <option value="2">500</option>
+                </select><br><br>
+                <label class="page-selection">Subject:</label><br><br>
+                <select class="page-number" id="select" value="0">
+                    <option value="0">Select Type:</option><br><br>
+                    <option value="1">Reflection/Narrative</option>
+                    <option value="2">Argument</option>
+                    <option value="2">Research</option>
+                </select><br><br>
+                <label class="page-selection">Drafting:</label><br><br>
+                <select class="page-number" id="select" value="0">
+                    <option value="0">Select Type:</option><br><br>
+                    <option value="1">No Drafting</option>
+                    <option value="2">Minimal Drafting</option>
+                    <option value="2">Extensive Drafting</option>
+                </select><br><br>
+                <label class="class-label">Writing Rate (Minutes):</label>
+                <div id="writingResults"></div>
+            </div>
+            <div class="grid-item discussions">DISCUSSION POSTS<br><br>
+                <label class="class-label">Posts Per Week:</label>
+                <input type="text" id="discussions" class="input" onkeyup="getDiscussionRate()"><br><br>
+                <label class="page-selection">Format:</label><br><br>
+                <select class="page-number" id="select" value="0">
+                    <option value="0">Select:</option><br><br>
+                    <option value="1">Text</option>
+                    <option value="2">Audio/Video</option>
+                </select><br><br><br>
+                <label class="class-label">Average Length (Minutes):</label>
+                <input type="text" id="discussMins" class="input" onkeyup="getDiscussionRate()"><br><br><br>
+                <label class="class-label">Hours Per Week:</label>
+                <div id="discussionResults"></div>
+
+
+            </div>
+            <div class="grid-item other">PRACTICE ACTIVITIES<br><br>
+                <label class="class-label">Number Per Semester:</label>
+                <input type="text" id="hours" class="input" onkeyup=""><br><br>
+                <label class="page-selection">Estimated Hours:</label><br><br>
+                <input id="pages" type="text" class="input" name="input" oninput=""><br><br>
+
+            </div>
+            <div class="grid-item reading">READING ASSIGNMENTS<br><br>
+                <label class="class-label">Pages Per Week:</label>
+                <input type="text" id="reading" class="input" onkeyup="getReadingRate()"><br><br>
+                <label class="page-selection">Page Density:</label><br><br>
+                <select class="page-number"  id="select" value="0" >
+                    <option value="0">Select Pages:</option><br><br>
+                    <option value="1">450</option>
+                    <option value="2">600</option>
+                    <option value="3">750</option>
+                </select><br><br>
+                <label class="page-selection">Difficulty:</label><br><br>
+                <select class="page-number" id="select" value="0">
+                    <option value="0">Select Difficulty: </option>
+                    <option value="1">No New Concepts</option>
+                    <option value="2">Some New Concepts</option>
+                    <option value="3">Many New Concepts</option>
+                </select><br><br>
+                <label class="page-selection">Purpose:</label><br><br>
+                <select class="page-number" id="select" >
+                    <option value="0">Select Type: </option>
+                    <option value="1">Survey</option>
+                    <option value="2">Understand</option>
+                    <option value="3">Engage</option>
+                </select><br><br>
+                <label class="class-label" id="readingTotal">Reading Rate (Minutes):</label>
+                <div id="readingResults"></div>
+            </div>
+            <div class="grid-item exams">EXAMS<br><br>
+                <label class="class-label">Exams Per Semester:</label>
+                <input id="exams" type="text" class="input" oninput=""><br><br>
+                <label class="class-label">Study Hours Per Exam:</label>
+                <input type="text" id="hours" class="input" oninput=""><br><br>
+            </div>
+            <div class="grid-item meetings">MEETINGS<br><br>
+                <label class="class-label">Live Meetings Per Week:</label>
+                <input type="text" id="meetings" class="input" oninput=""><br><br>
+                <label class="class-label">Meeting Length (Hours):</label>
+                <input type="text" id="hours" class="input" oninput=""><br><br>
+            </div>
+            <div class="grid-item videos">WEB<br><br>
+                <label class="class-label">Articles (Words):</label>
+                <input id="pages" type="text" class="input"  oninput=""><br><br>
+                <P>VIDEOS</P>
+                <input id="hours" type="text" class="input" oninput=""><br><br>
+            </div>
+            <div class="grid-item estimates">WORKLOAD ESTIMATES:<br><br>
+                <label class="total">Total Hours:</label><span id="totalHours">0</span><br><br>
+                <div class="form-control" type="text" id="total">
+
+                </div>
+                <label class="total">Independent:</label><br><br>
+                <label class="total">Contact:</label><br><br><br>
+                <button class="button">Download Results</button>
+        <script src="/src/js/courseSearch.js"></script>
+        <script src="/src/js/calculations.js"></script>
+    </body>
+</html>

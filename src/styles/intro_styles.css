@@ -1,0 +1,113 @@
+/* 
+    Intro Page Styles Sheet
+*/
+
+html, body {
+  height:100%;
+  overflow: hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    overflow: hidden;
+    width: 800px;
+    height: 500px;
+    margin-top: 120px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 40px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 80px;
+    border-style: none;
+    border-width: 1px;
+    border-color: #5322bd;
+    border-radius: 10px;
+    background-color: #f3efef;
+    box-shadow: 5px 4px 14px 2px rgba(61, 52, 194, 0.75);
+    opacity: 1;
+    -webkit-transition: opacity 200ms ease;
+    transition: opacity 200ms ease;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: justify;
+    letter-spacing: 0px;
+    white-space: normal;
+    mix-blend-mode: normal;
+    -o-object-fit: fill;
+    object-fit: fill;
+  }
+  
+  .heading {
+    float: none;
+    border-radius: 5px;
+    background-color: rgba(31, 122, 93, 0);
+    font-weight: 600;
+    text-align: center;
+    -o-object-fit: fill;
+    object-fit: fill;
+  }
+  
+  .paragraph {
+    margin-right: 20px;
+    margin-left: 20px;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .body {
+    color: rgb(71, 71, 71);
+    background: linear-gradient(130deg, #4be096 0%, #67c2bf 85%, #2ae6dc 100%);
+    -webkit-transition: opacity 700ms ease;
+    transition: opacity 700ms ease;
+    -webkit-text-fill-color: inherit;
+    mix-blend-mode: normal;
+  }
+  
+  a.button {
+    margin:auto;
+    height: 30px;
+    padding: 0.5em 3em;
+    float: none;
+    border-radius: 8px;
+    background-color: #494cd8;
+    color:#FFFFFF;
+    -webkit-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    text-decoration:none;
+    transform: translate(0px, 0px);
+    font-family:'Roboto',sans-serif;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    -o-object-fit: fill;
+    object-fit: fill;
+    transition: all 0.15s;
+  }
+  
+  a.button:hover {
+    background-color:#2f308d;
+    color: rgb(170, 170, 170);
+  }
+
+
+  .image {
+    display: block;
+    min-width: 120px;
+    padding-top: 32px;
+    padding-left: 0px;
+    text-align: left;
+  }
+
+  @media (min-width: 500px) and (max-width: 800px) {
+    .container {
+      padding:20px 20px 40px 20px;
+    }
+  }
+  
