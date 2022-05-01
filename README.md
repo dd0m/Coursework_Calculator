@@ -14,6 +14,6 @@ The Coursework Calculator automatically calculates the dedicated amount of hours
  * Web Articles & Textbooks
 
 
-(![calculator](https://user-images.githubusercontent.com/91149920/166163692-cabcfd31-f3c6-4af0-8175-700e954f8e8b.png)
+![Screenshot from 2022-05-01 15-39-32](https://user-images.githubusercontent.com/91149920/166163746-ef6475cb-2586-4af5-be55-9967592703f8.png)
 ![calculator_2](https://user-images.githubusercontent.com/91149920/166163712-203ea51b-ed91-476d-928c-81b256abf6f6.png)
 ![calc_pdf](https://user-images.githubusercontent.com/91149920/166163713-70a42cda-9750-4872-81a8-23c9b59ab224.png)
