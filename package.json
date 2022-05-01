@@ -1,0 +1,29 @@
+{
+  "name": "coursework_calculator",
+  "version": "1.0.0",
+  "description": "Coursework Calculator Web App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dd0m/Coursework_Calculator.git"
+  },
+  "author": "Daphne Domalis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dd0m/Coursework_Calculator/issues"
+  },
+  "homepage": "https://github.com/dd0m/Coursework_Calculator#readme",
+  "keywords": [],
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

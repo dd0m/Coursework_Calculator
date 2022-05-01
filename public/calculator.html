@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Tab bar title and icon image-->
+        <link rel="tab icon" href="/images/tulane_favicon.ico">
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SoPA Coursework Calculator</title>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="/css/calculator_styles.css">
+    </head>
+    <body>
+        <div class="grid-container" id="grid-container">
+            <div class="grid-item courses">COURSE INFO<br><br>
+                <label class="class-label">Search Courses:</label>
+                <div class='courses'>
+                    <input type="text" id="search" class="course-search" placeholder="Search.."><br><br>
+                    <div class="results"></div>
+                </div>
+            </div>
+            <div class="grid-item writing">WRITING ASSIGNMENTS<br><br>
+                <label class="class-label">Pages Per Semester:</label>
+                <input type="text" id="writing" class="input" onkeyup="calculateModules()"><br><br>
+                <label class="page-selection" id="select">Page Density:</label><br><br>
+                <select class="page-number" value="0">
+                    <option value="0">Select Pages:</option><br><br>
+                    <option value="1">250</option>
+                    <option value="2">500</option>
+                </select><br><br>
+                <label class="page-selection">Subject:</label><br><br>
+                <select class="page-number" id="select" value="0">
+                    <option value="0">Select Type:</option><br><br>
+                    <option value="1">Reflection/Narrative</option>
+                    <option value="2">Argument</option>
+                    <option value="2">Research</option>
+                </select><br><br>
+                <label class="page-selection">Drafting:</label><br><br>
+                <select class="page-number" id="select" value="0">
+                    <option value="0">Select Type:</option><br><br>
+                    <option value="1">No Drafting</option>
+                    <option value="2">Minimal Drafting</option>
+                    <option value="2">Extensive Drafting</option>
+                </select><br><br>
+                <label class="class-label">Writing Rate (Minutes):</label>
+                <div id="writingResults">0</div>
+            </div>
+            <div class="grid-item discussions">DISCUSSION POSTS<br><br>
+                <label class="class-label">Posts Per Week:</label>
+                <input type="text" id="discussions" class="input" onkeyup="calculateModules()"><br><br>
+                <label class="page-selection">Format:</label><br><br>
+                <select class="page-number" id="select" value="0">
+                    <option value="0">Select:</option><br><br>
+                    <option value="1">Text</option>
+                    <option value="2">Audio/Video</option>
+                </select><br><br><br>
+                <label class="class-label">Average Length (Minutes):</label>
+                <input type="text" id="discussMins" class="input" onkeyup="calculateModules()"><br><br><br>
+                <label class="class-label">Hours Per Week:</label>
+                <div id="discussionResults">0</div>
+            </div>
+            <div class="grid-item other">PRACTICE ACTIVITIES<br><br>
+                <label class="class-label">Number Per Semester:</label>
+                <input type="text" id="practice" class="input" onkeyup="calculateModules()"><br><br>
+                <label class="class-label">Estimated Hours:</label>
+                <input id="practiceEst" type="text" class="input" onkeyup="calculateModules()"><br><br>
+                <div hidden id="practiceResults"></div>
+            </div>
+            <div class="grid-item reading">READING ASSIGNMENTS<br><br>
+                <label class="class-label">Pages Per Week:</label>
+                <input type="text" id="reading" class="input" onkeyup="calculateModules()"><br><br>
+                <label class="page-selection">Page Density:</label><br><br>
+                <select class="page-number"  id="select" value="0" >
+                    <option value="0">Select Pages:</option><br><br>
+                    <option value="1">450</option>
+                    <option value="2">600</option>
+                    <option value="3">750</option>
+                </select><br><br>
+                <label class="page-selection">Difficulty:</label><br><br>
+                <select class="page-number" id="select" value="0">
+                    <option value="0">Select Difficulty: </option>
+                    <option value="1">No New Concepts</option>
+                    <option value="2">Some New Concepts</option>
+                    <option value="3">Many New Concepts</option>
+                </select><br><br>
+                <label class="page-selection">Purpose:</label><br><br>
+                <select class="page-number" id="select" >
+                    <option value="0">Select Type: </option>
+                    <option value="1">Survey</option>
+                    <option value="2">Understand</option>
+                    <option value="3">Engage</option>
+                </select><br><br><br>
+                <label class="class-label" id="readingTotal">Reading Rate (Minutes):</label>
+                <div id="readingResults">0</div>
+            </div>
+            <div class="grid-item exams">EXAMS<br><br>
+                <label class="class-label">Exams Per Semester:</label>
+                <input id="exams" type="text" class="input" onkeyup="calculateModules()"><br><br>
+                <label class="class-label">Study Hours Per Exam:</label>
+                <input type="text" id="examHours" class="input" onkeyup="calculateModules()"><br><br>
+                <div hidden id="examResults"></div>
+            </div>
+            <div class="grid-item meetings">MEETINGS<br><br>
+                <label class="class-label">Live Meetings Per Week:</label>
+                <input type="text" id="meetings" class="input" onkeyup="calculateModules()"><br><br>
+                <label class="class-label">Meeting Length (Hours):</label>
+                <input type="text" id="meetingHours" class="input" onkeyup="calculateModules()"><br><br>
+                <label class="class-label">Meeting Total (Minutes):</label>
+                <div id="meetingResults">0</div>
+            </div>
+            <div class="grid-item videos">WEB<br><br>
+                <label class="class-label">Articles (Words):</label>
+                <input id="webWords" type="text" class="input"  onkeyup="calculateModules()">
+                <P>VIDEOS</P>
+                <input id="videos" type="text" class="input" onkeyup="calculateModules()"><br><br>
+                <label class="class-label">Web Total (Minutes):</label>
+                <div id="webVideoResults">0</div>
+            </div>
+            <div class="grid-item estimates" id="totalPDF">WORKLOAD ESTIMATES:<br><br>
+                <label class="total">Total Hours:</label><span id="totalResults">0</span><br><br>
+                <label class="total">Independent:</label><span id="independentResults">0</span><br><br>
+                <label class="total">Contact:</label><span id="contactResults">0</span><br><br><br>
+                <button class="button" onclick="generatePDF()">Download Results</button>
+            </div>
+        </div>
+        <script src="/js/courseSearch.js"></script>
+        <script src="/js/calculations.js"></script>
+        <script src="/js/generatePDF.js"></script>
+        <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    </body>
+</html>
